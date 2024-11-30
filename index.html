@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Agenda de Reuniões</title>
+    <link rel="stylesheet" href="def.css">
+</head>
+<body>
+
+      <header>
+            <h1>Minha Agenda Inteligente</h1>
+            <nav>  </nav>
+      </header>
+      
+
+      <main>
+        <section class="reuniao">
+            <h1>Criamos e ajudamos a agendar um novo evento</h1>
+            <h2>Eventos</h2>
+            <p>Tema: Lançamento do novo produto</p>
+            <p>Participantes: Simão Kanda Pedro, Jovelio Viegas, Sebastião Flash</p>
+            <img src="imagem.lnk" alt="" style="height: 300px;" >
+        </section>
+        <aside border="1";>
+            <h1>Sobre Mim</h1>
+            <p><h4>Sou uma agenda inteligente AI no Flowise um sistema automatizado, alimentado por 
+                inteligência artificial, que utiliza a plataforma Flowise para gerenciar e otimizar os meus 
+                compromissos. Em vez de você precisar manualmente adicionar e gerenciar seus eventos em um 
+                calendário, eu farei isso por você, aprendendo com suas preferências e adaptando-se
+                 às suas necessidades ao longo do tempo</h4></p>
+
+           
+        </aside>
+        </main>
+        <script src="script.js"></script>
+        <script type="module">
+            import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+            Chatbot.init({
+                chatflowid: "5a542248-a1e8-4d6b-baf3-d02c2823fa4e",
+                apiHost: "http://localhost:3000",
+                chatflowConfig: {
+                    // topK: 2
+                },
+                theme: {
+                    button: {
+                        backgroundColor: "#3B81F6",
+                        right: 20,
+                        bottom: 20,
+                        size: 48, // small | medium | large | number
+                        dragAndDrop: true,
+                        iconColor: "white",
+                        customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+                        autoWindowOpen: {
+                            autoOpen: true, //parameter to control automatic window opening
+                            openDelay: 2, // Optional parameter for delay time in seconds
+                            autoOpenOnMobile: false, //parameter to control automatic window opening in mobile
+                            },
+                    },
+                    tooltip: {
+                        showTooltip: true,
+                        tooltipMessage: 'clique aqui para começar a conversa👋!',
+                        tooltipBackgroundColor: '#3B81F6',
+                        tooltipTextColor: 'white',
+                        tooltipFontSize: 16,
+                    },
+                    chatWindow: {
+                        showTitle: true,
+                        title: 'Agenda IA',
+                        titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                        showAgentMessages: true,
+                        welcomeMessage: 'Ola! Seja bem-vindo a nossa agenda de evento ',
+                        errorMessage: 'Erro de mensagem',
+                        backgroundColor: "#ffffff",
+                        backgroundImage: 'enter image path or link', // If set, this will overlap the background color of the chat window.
+                        height: 400,
+                        width: 400,
+                        fontSize: 16,
+                        //starterPrompts: ['What is a bot?', 'Who are you?'], // It overrides the starter prompts set by the chat flow passed
+                        starterPromptFontSize: 15,
+                        clearChatOnReload: false, // If set to true, the chat will be cleared when the page reloads.
+                        botMessage: {
+                            backgroundColor: "#f7f8ff",
+                            textColor: "#303235",
+                            showAvatar: true,
+                            avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
+                        },
+                        userMessage: {
+                            backgroundColor: "#3B81F6",
+                            textColor: "#ffffff",
+                            showAvatar: true,
+                            avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+                        },
+                        textInput: {
+                            placeholder: 'Marque o seu evento ou cria a sua agenda',
+                            backgroundColor: '#ffffff',
+                            textColor: '#303235',
+                            sendButtonColor: '#3B81F6',
+                            maxChars: 1000,
+                            maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
+                            autoFocus: true, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
+                            sendMessageSound: true,
+                            // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
+                            receiveMessageSound: true,
+                            // receiveSoundLocation: "receive_message.mp3", // If this is not used, the default sound effect will be played if receiveSoundMessage is true. 
+                        },
+                        feedback: {
+                            color: '#303235',
+                        },
+                        footer: {
+                            textColor: '#303235',
+                            text: 'Feito por:',
+                            company: 'GRUPO 15, O futuro do Amanhã',
+                            companyLink: 'https://flowiseai.com',
+                        }
+                    }
+                }
+            })
+        </script>
+    <footer>
+        <h3> Lançamento:2024   <h3>GRUPO 15</h3>  </h3> <h3>Email:simaokandaa@email.com</h3>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
